@@ -58,7 +58,7 @@ module.exports = {
       }
       return res.json(expenses);
     } catch (error) {
-      return res.json(`ERROR TO CREATE EXPENSES -- ${error}`);
+      return res.status(400).json(`ERROR TO CREATE EXPENSES -- ${error}`);
     }
   },
   async updateExpenses(req, res) {
